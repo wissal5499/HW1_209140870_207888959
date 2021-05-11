@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Enter Password</title>
+    <style>
+      input:valid {
+        background-color: lightgreen;
+        border: 2px solid green;
+      }
+      input:invalid {
+        background-color: lightpink;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>⭐Welcome to our website⭐</h1>
+    </header>
+
+    <div class="container">
+      <section class="heading">
+        <br />
+        <h2>Change Password:</h2>
+        <form class="form-control" action="shopping list.html">
+          <label class="lb" for="pass1">New Password:</label><br />
+          <input
+            class="input"
+            type="password"
+            id="pass1"
+            title="Min 5 letters"
+            pattern="[a-z0-9]{5,}"
+            oninput="checkPasswords();"
+            placeholder="Enter password"
+            required
+          />
+          <br />
+          <label class="lb" for="pass2">Confirm Password: </label><br />
+          <input
+            class="input"
+            type="password"
+            id="pass2"
+            title="Min 5 letters"
+            pattern="[a-z0-9]{5,}"
+            oninput="checkPasswords();"
+            placeholder="Repeat password"
+            required
+          />
+
+          <div id="btn">
+            <button class="submit-btn">Change password</button>
+          </div>
+          <br />
+        </form>
+      </section>
+    </div>
+    <br />
+
+    <script>
+      function checkPasswords() {
+        var pass1 = document.getElementById("pass1");
+        var pass2 = document.getElementById("pass2");
+        if (pass1.value != pass2.value) {
+          pass2.setCustomValidity("Passwords do not match!");
+        } else {
+          pass2.setCustomValidity("");
+        }
+      }
+    </script>
+    <footer>
+      <h5>©️ Wissal.A kmerat && Mlak Biadse</h5>
+    </footer>
+  </body>
+</html>

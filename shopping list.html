@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Shopping List</title>
+  </head>
+  <body>
+    <header>
+      <h1>⭐Welcome to our website⭐</h1>
+    </header>
+    <br />
+    <div id="btn">
+      <h2>You can add a new List</h2>
+      <button id="add_list" class="submit-btn" onclick="Add_newlist()">
+        Add a new List
+      </button>
+    </div>
+    <br /><br />
+    <div class="container">
+      <section class="heading">
+        <p class="status"></p>
+        <h2 class="h2">MY List</h2>
+        <form class="form-control">
+          <label for="name" class="name">Item name:</label>
+          <input
+            type="text"
+            id="name-item"
+            class="input"
+            placeholder="Enter a name"
+            autocomplete="off"
+          />
+          <br />
+          <label class="quantity" for="quantity">Quantity:</label>
+          &nbsp;&nbsp;&nbsp;
+          <input
+            type="number"
+            id="quantity-item"
+            class="input"
+            value="1"
+            min="0"
+          />
+          <br />
+
+          <div id="btn">
+            <button type="submit" class="submit-btn">Add Item</button>
+          </div>
+        </form>
+        <br />
+      </section>
+      <section class="shopping-list">
+        <ul class="shopping-list-items"></ul>
+      </section>
+    </div>
+    <br />
+
+    <script src="shopping_list.js"></script>
+
+    <footer>
+      <h5>©️ Wissal.A kmerat && Mlak Biadse</h5>
+    </footer>
+  </body>
+</html>

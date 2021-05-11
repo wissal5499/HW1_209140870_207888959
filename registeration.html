@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registeration</title>
+    <style>
+      input:valid {
+        background-color: lightgreen;
+        border: 2px solid green;
+      }
+      input:invalid {
+        background-color: lightpink;
+        border: 2px solid red;
+      }
+      .container {
+        background-color: dimgray;
+        text-align: left;
+        width: 500px;
+        height: 550px;
+        margin-top: 50px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>⭐Welcome to our website⭐</h1>
+    </header>
+    <div class="container">
+      <section class="heading">
+        <br />
+        <h2 class="h2">Register:</h2>
+        <form class="form-control" action="shopping list.html" method="GET">
+          <label class="lb" for="email1">Email:</label><br />
+          <input
+            type="email"
+            id="email1"
+            name="email1"
+            class="input"
+            oninput="checkEmails();"
+            placeholder="Enter you'r Email"
+            required
+          />
+          <br />
+          <label class="lb" for="email2">Repeat Email: </label><br />
+          <input
+            type="email2"
+            id="email2"
+            name="email2"
+            class="input"
+            oninput="checkEmails();"
+            placeholder="Repeat email"
+            required
+          />
+          <br />
+          <label class="lb" for="name">Nickname:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="input"
+            placeholder="Enter a nickname"
+          />
+          <br />
+          <label class="lb" for="phone">Phone Number: </label>
+          <br />
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            class="input"
+            placeholder="Enter a phone number"
+          />
+          <br /><br />
+          <div id="btn">
+            <button class="submit-btn">save</button>
+          </div>
+          <br />
+        </form>
+      </section>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <script>
+      function checkEmails() {
+        let email1 = document.getElementById("email1");
+        let email2 = document.getElementById("email2");
+        if (email1.value != email2.value) {
+          email2.setCustomValidity("Emails do not match!");
+        } else {
+          email2.setCustomValidity("");
+        }
+      }
+    </script>
+    <footer>
+      <h5>©️ Wissal.A kmerat && Mlak Biadse</h5>
+    </footer>
+  </body>
+</html>
